@@ -57,67 +57,130 @@
   <section id="carta-servicos" class="px-4 pt-10 pb-6 lg:pt-14 lg:pb-10 max-w-[1100px] mx-auto">
     <h2 class="font-[Inter] text-[21px] font-medium text-primary mb-5 lg:mb-7">Carta de Serviços</h2>
 
-    <!-- Mobile: 1 col stacked | Desktop: 3 col grid -->
-    <div class="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-4">
+    <!--
+      Mobile  : flex-col — detalhe abre inline abaixo do card clicado (accordion)
+      Desktop : flex-row — grid vira 2 colunas + painel de detalhe ocupa a 3ª coluna
+    -->
+    <div id="servicos-layout" class="flex flex-col lg:flex-row lg:items-start lg:gap-5">
 
-      <!-- Serviço 1 -->
-      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <!-- Replace div above with: <img src="./images/nano-fios.jpg" alt="Nano Fios Sustentáveis" class="absolute inset-0 w-full h-full object-cover"> -->
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">nano fios sustentáveis</span>
+      <!-- Cards grid -->
+      <div id="servicos-grid" class="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-4 lg:flex-1">
+
+        <!-- Card 1 -->
+        <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="nano-fios" role="button" tabindex="0" aria-expanded="false" aria-label="nano fios sustentáveis — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/nano-fios.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">nano fios sustentáveis</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="design-sustentavel" role="button" tabindex="0" aria-expanded="false" aria-label="design sustentável — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/design-sustentavel.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">design sustentável</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="lash-lifting" role="button" tabindex="0" aria-expanded="false" aria-label="lash lifting — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/lash-lifting.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">lash lifting</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="remocao-laser" role="button" tabindex="0" aria-expanded="false" aria-label="remoção à laser — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/remocao-laser.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">remoção à laser</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card relative h-[70px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="design-tintura" role="button" tabindex="0" aria-expanded="false" aria-label="design sustentável com tintura — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/design-tintura.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">design sustentável<br>com tintura</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card relative h-[46px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="brow-lamination" role="button" tabindex="0" aria-expanded="false" aria-label="brow lamination — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/brow-lamination.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">brow lamination</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="service-card relative h-[46px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="micropigmentacao-labial" role="button" tabindex="0" aria-expanded="false" aria-label="micropigmentação labial — ver detalhes">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+          <!-- Trocar por: <img src="./images/micropigmentacao-labial.jpg" alt="" class="absolute inset-0 w-full h-full object-cover"> -->
+          <div class="absolute inset-0 flex items-center justify-between px-4">
+            <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">micropigmentação labial</span>
+            <svg class="card-chevron w-5 h-5 text-white flex-shrink-0 opacity-80 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+
+      </div>
+      <!-- /servicos-grid -->
+
+      <!-- ── Painel de detalhe do serviço ──────────────────────────────────
+           Posicionado por JS:
+           · Mobile  → insertAdjacentElement('afterend', card) dentro do flex-col
+           · Desktop → appendChild(servicosLayout) como 3ª coluna no flex-row
+      ──────────────────────────────────────────────────────────────────── -->
+      <div id="service-detail" class="hidden w-full rounded-2xl overflow-hidden" style="background:linear-gradient(135deg,#a16445,#c4a07c);">
+
+        <!-- Imagem -->
+        <div class="w-full h-[180px] bg-white/10 flex-shrink-0 overflow-hidden flex items-center justify-center relative">
+          <!-- Trocar por: <img id="detail-img" src="" alt="" class="w-full h-full object-cover"> -->
+          <span class="text-white/40 text-sm font-[Inter] select-none">[ imagem do serviço ]</span>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="p-5 flex flex-col gap-4">
+
+          <!-- Nome + Fechar -->
+          <div class="flex items-start justify-between gap-2">
+            <h3 id="detail-name" class="font-['Dancing_Script',cursive] text-[24px] text-white leading-tight"></h3>
+            <button onclick="closeDetailPanel()"
+                    class="mt-0.5 w-7 h-7 flex-shrink-0 flex items-center justify-center rounded-full bg-black/20 text-white text-sm leading-none hover:bg-black/40 transition-colors"
+                    aria-label="Fechar detalhes">✕</button>
+          </div>
+
+          <!-- Boxes de preço (criados via JS) -->
+          <div id="detail-prices" class="flex flex-col gap-2"></div>
+
+          <!-- Descrição -->
+          <p id="detail-desc" class="font-['Red_Hat_Display',sans-serif] text-[12px] text-white leading-relaxed"></p>
+
+          <!-- CTA -->
+          <a id="detail-cta" href="#" target="_blank" rel="noopener noreferrer"
+             class="w-full text-center bg-[#8d5234] text-white font-[Inter] text-sm font-bold py-2.5 rounded-lg hover:bg-[#7a4729] transition-colors">
+            Agende agora
+          </a>
+
         </div>
       </div>
-
-      <!-- Serviço 2 -->
-      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">design sustentável</span>
-        </div>
-      </div>
-
-      <!-- Serviço 3 -->
-      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">lash lifting</span>
-        </div>
-      </div>
-
-      <!-- Serviço 4 -->
-      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">remoção à laser</span>
-        </div>
-      </div>
-
-      <!-- Serviço 5 (maior no mobile) -->
-      <div class="service-card relative h-[70px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">design sustentável<br class="lg:hidden">com tintura</span>
-        </div>
-      </div>
-
-      <!-- Serviço 6 -->
-      <div class="service-card relative h-[46px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">brow lamination</span>
-        </div>
-      </div>
-
-      <!-- Serviço 7 -->
-      <div class="service-card relative h-[46px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-3">
-          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">micropigmentação labial</span>
-        </div>
-      </div>
+      <!-- /service-detail -->
 
     </div>
+    <!-- /servicos-layout -->
   </section>
 
 
@@ -479,6 +542,188 @@
     window.addEventListener('resize', () => {
       currentSlide = 0;
       updateCarousel();
+    });
+
+    // ---- Service Detail Panel ----
+    const SERVICES = {
+      'nano-fios': {
+        name: 'nano fios sustentáveis',
+        pricePix: '180,00',
+        priceCredit: '200,00',
+        creditInfo: '2X SEM JUROS\n6X COM JUROS',
+        description: 'A técnica de Nano Fios Sustentáveis reproduz fios artificiais com máxima naturalidade, respeitando as características únicas de cada sobrancelha. O resultado é denso, durável e completamente imperceptível ao toque e ao olhar.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20nano%20fios%20sustentáveis.',
+      },
+      'design-sustentavel': {
+        name: 'design sustentável',
+        pricePix: '80,00',
+        priceCredit: '90,00',
+        creditInfo: '2X SEM JUROS\n4X COM JUROS',
+        description: 'Design de sobrancelha com foco na harmonia do rosto, respeitando os fios naturais e realçando o que é único em você. Técnica exclusiva com visagismo integrado.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20design%20sustentável.',
+      },
+      'lash-lifting': {
+        name: 'lash lifting',
+        pricePix: '120,00',
+        priceCredit: '135,00',
+        creditInfo: '2X SEM JUROS\n4X COM JUROS',
+        description: 'O Lash Lifting eleva e curva os cílios naturais, criando um efeito de cílios maiores e olhos mais abertos — sem extensão. O resultado dura até 8 semanas.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20lash%20lifting.',
+      },
+      'remocao-laser': {
+        name: 'remoção à laser',
+        pricePix: '200,00',
+        priceCredit: '220,00',
+        creditInfo: '2X SEM JUROS\n6X COM JUROS',
+        description: 'Remoção segura e eficiente de micropigmentação antiga com laser de precisão, preparando a pele para novos procedimentos ou simplesmente devolvendo a sobrancelha natural.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20remoção%20à%20laser.',
+      },
+      'design-tintura': {
+        name: 'design sustentável com tintura',
+        pricePix: '100,00',
+        priceCredit: '110,00',
+        creditInfo: '2X SEM JUROS\n4X COM JUROS',
+        description: 'Design sustentável combinado com tintura profissional para realçar a cor e volumizar visualmente os fios, mantendo a naturalidade e a harmonia do rosto.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20design%20sustentável%20com%20tintura.',
+      },
+      'brow-lamination': {
+        name: 'brow lamination',
+        pricePix: '180,00',
+        priceCredit: '200,00',
+        creditInfo: '2X SEM JUROS\n6X COM JUROS',
+        description: 'O Brow Lamination consiste na laminação dos fios, tornando-os mais alinhados e maleáveis, possibilitando estilizar as sobrancelhas com diversos tipos de design. Esta técnica é ideal para quem tem sobrancelhas mais finas ou fios rebeldes e deseja dar mais volume a elas.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20brow%20lamination.',
+      },
+      'micropigmentacao-labial': {
+        name: 'micropigmentação labial',
+        pricePix: '350,00',
+        priceCredit: '400,00',
+        creditInfo: '3X SEM JUROS\n6X COM JUROS',
+        description: 'Micropigmentação labial para definir contorno, corrigir assimetrias e realçar a cor natural dos lábios. Resultado duradouro com aspecto natural e harmônico.',
+        waMsg: 'Olá%20Marina!%20Quero%20agendar%20micropigmentação%20labial.',
+      },
+    };
+
+    const servicosLayout = document.getElementById('servicos-layout');
+    const servicosGrid   = document.getElementById('servicos-grid');
+    const serviceDetail  = document.getElementById('service-detail');
+    const detailName     = document.getElementById('detail-name');
+    const detailPrices   = document.getElementById('detail-prices');
+    const detailDesc     = document.getElementById('detail-desc');
+    const detailCta      = document.getElementById('detail-cta');
+    let   activeService  = null;
+
+    function buildPriceBox(label, price, extra) {
+      const box = document.createElement('div');
+      box.style.cssText = 'background:#8d5234; border-radius:12px; padding:8px 12px; display:flex; flex-direction:column; gap:2px; align-self:flex-start;';
+      const labelEl = document.createElement('span');
+      labelEl.style.cssText = 'color:rgba(255,255,255,0.8); font-family:Inter,sans-serif; font-size:8px; font-weight:500; line-height:1.2; text-transform:uppercase; letter-spacing:0.05em;';
+      labelEl.textContent = label;
+      const priceRow = document.createElement('div');
+      priceRow.style.cssText = 'display:flex; align-items:baseline; gap:2px;';
+      const currency = document.createElement('span');
+      currency.style.cssText = 'color:#fff; font-family:Inter,sans-serif; font-size:11px; font-weight:400; line-height:1;';
+      currency.textContent = 'R$';
+      const amount = document.createElement('span');
+      amount.style.cssText = 'color:#fff; font-family:Inter,sans-serif; font-size:18px; font-weight:500; line-height:1;';
+      amount.textContent = price;
+      priceRow.appendChild(currency);
+      priceRow.appendChild(amount);
+      box.appendChild(labelEl);
+      box.appendChild(priceRow);
+      if (extra) {
+        const extraEl = document.createElement('span');
+        extraEl.style.cssText = 'color:rgba(255,255,255,0.75); font-family:Inter,sans-serif; font-size:7px; font-weight:500; line-height:1.4; margin-top:2px; white-space:pre-line;';
+        extraEl.textContent = extra;
+        box.appendChild(extraEl);
+      }
+      return box;
+    }
+
+    function populateDetail(data) {
+      detailName.textContent = data.name;
+      detailPrices.innerHTML = '';
+      detailPrices.appendChild(buildPriceBox('no pix ou débito', data.pricePix, null));
+      detailPrices.appendChild(buildPriceBox('no CRÉDITO', data.priceCredit, data.creditInfo));
+      detailDesc.textContent = data.description;
+      detailCta.href = `https://wa.me/5531996927404?text=${data.waMsg}`;
+    }
+
+    function openDetailPanel(key) {
+      const data = SERVICES[key];
+      if (!data) return;
+
+      // Clicar no mesmo card abre/fecha (toggle)
+      if (activeService === key) { closeDetailPanel(); return; }
+
+      populateDetail(data);
+
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (isDesktop) {
+        // Garante que o painel está em servicos-layout (pode estar dentro do grid vindo do mobile)
+        servicosLayout.appendChild(serviceDetail);
+        // Grid passa de 3 para 2 colunas
+        servicosGrid.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
+        // Largura fixa do painel (310px como no Figma)
+        serviceDetail.style.width        = '310px';
+        serviceDetail.style.flexShrink   = '0';
+        serviceDetail.style.alignSelf    = 'stretch';
+      } else {
+        // Move o painel para logo após o card clicado (dentro do flex-col)
+        const card = servicosGrid.querySelector(`[data-service="${key}"]`);
+        card.insertAdjacentElement('afterend', serviceDetail);
+        serviceDetail.style.width      = '';
+        serviceDetail.style.flexShrink = '';
+        serviceDetail.style.alignSelf  = '';
+        // Rola suavemente para o painel
+        setTimeout(() => serviceDetail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+      }
+
+      serviceDetail.classList.remove('hidden');
+
+      // Atualiza aria-expanded e rotação do chevron em todos os cards
+      document.querySelectorAll('.service-card[data-service]').forEach(c => {
+        const isActive = c.dataset.service === key;
+        c.setAttribute('aria-expanded', String(isActive));
+        const chevron = c.querySelector('.card-chevron');
+        if (chevron) chevron.style.transform = isActive ? 'rotate(90deg)' : '';
+      });
+
+      activeService = key;
+    }
+
+    function closeDetailPanel() {
+      serviceDetail.classList.add('hidden');
+      // Devolve o painel ao container pai padrão (servicos-layout)
+      servicosLayout.appendChild(serviceDetail);
+      // Restaura grid de 3 colunas
+      servicosGrid.style.gridTemplateColumns = '';
+      // Reseta aria e chevrons
+      document.querySelectorAll('.service-card[data-service]').forEach(c => {
+        c.setAttribute('aria-expanded', 'false');
+        const chevron = c.querySelector('.card-chevron');
+        if (chevron) chevron.style.transform = '';
+      });
+      activeService = null;
+    }
+
+    // Re-posiciona ao mudar de tamanho de tela (ex: rotação do dispositivo)
+    window.addEventListener('resize', () => {
+      if (activeService) openDetailPanel(activeService);
+    });
+
+    // ESC fecha o painel
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && activeService) closeDetailPanel();
+    });
+
+    // Eventos nos cards
+    document.querySelectorAll('.service-card[data-service]').forEach(card => {
+      card.addEventListener('click', () => openDetailPanel(card.dataset.service));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetailPanel(card.dataset.service); }
+      });
     });
   </script>
 
