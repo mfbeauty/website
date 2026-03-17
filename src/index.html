@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marina França Beauty</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;600;700&family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-black" style="font-family:'Red Hat Display',sans-serif;">
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="bg-primary sticky top-0 z-50 shadow-sm">
+    <div class="max-w-[1440px] mx-auto px-5 h-14 lg:h-[89px] flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 select-none" aria-label="Marina França Beauty">
+        <span class="text-white font-[Inter] text-base font-semibold tracking-[0.18em] uppercase leading-none">Marina França</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Navegação principal">
+        <a href="#carta-servicos" class="text-white font-[Inter] text-sm font-medium hover:opacity-70 transition-opacity">Carta de Serviços</a>
+        <a href="#mentoria"       class="text-white font-[Inter] text-sm font-medium hover:opacity-70 transition-opacity">Mentoria</a>
+        <a href="#sobre"          class="text-white font-[Inter] text-sm font-medium hover:opacity-70 transition-opacity">Sobre</a>
+        <a href="#depoimentos"    class="text-white font-[Inter] text-sm font-medium hover:opacity-70 transition-opacity">Depoimentos</a>
+        <a href="#contato"        class="text-white font-[Inter] text-sm font-medium hover:opacity-70 transition-opacity">Contato</a>
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-btn" class="lg:hidden flex flex-col justify-center gap-1.5 w-9 h-9 p-1.5" aria-label="Abrir menu" aria-expanded="false">
+        <span id="line1" class="block h-0.5 w-full bg-white origin-center transition-all duration-300"></span>
+        <span id="line2" class="block h-0.5 w-full bg-white transition-all duration-300"></span>
+        <span id="line3" class="block h-0.5 w-full bg-white origin-center transition-all duration-300"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-white/20 bg-primary">
+      <nav class="flex flex-col px-5 py-3" aria-label="Menu mobile">
+        <a href="#carta-servicos" class="mobile-link text-white font-[Inter] text-sm font-medium py-3 border-b border-white/10">Carta de Serviços</a>
+        <a href="#mentoria"       class="mobile-link text-white font-[Inter] text-sm font-medium py-3 border-b border-white/10">Mentoria</a>
+        <a href="#sobre"          class="mobile-link text-white font-[Inter] text-sm font-medium py-3 border-b border-white/10">Sobre</a>
+        <a href="#depoimentos"    class="mobile-link text-white font-[Inter] text-sm font-medium py-3 border-b border-white/10">Depoimentos</a>
+        <a href="#contato"        class="mobile-link text-white font-[Inter] text-sm font-medium py-3">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ===================== CARTA DE SERVIÇOS ===================== -->
+  <section id="carta-servicos" class="px-4 pt-10 pb-6 lg:pt-14 lg:pb-10 max-w-[1100px] mx-auto">
+    <h2 class="font-[Inter] text-[21px] font-medium text-primary mb-5 lg:mb-7">Carta de Serviços</h2>
+
+    <!-- Mobile: 1 col stacked | Desktop: 3 col grid -->
+    <div class="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-4">
+
+      <!-- Serviço 1 -->
+      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <!-- Replace div above with: <img src="./images/nano-fios.jpg" alt="Nano Fios Sustentáveis" class="absolute inset-0 w-full h-full object-cover"> -->
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">nano fios sustentáveis</span>
+        </div>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">design sustentável</span>
+        </div>
+      </div>
+
+      <!-- Serviço 3 -->
+      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">lash lifting</span>
+        </div>
+      </div>
+
+      <!-- Serviço 4 -->
+      <div class="service-card relative h-[45px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">remoção à laser</span>
+        </div>
+      </div>
+
+      <!-- Serviço 5 (maior no mobile) -->
+      <div class="service-card relative h-[70px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">design sustentável<br class="lg:hidden">com tintura</span>
+        </div>
+      </div>
+
+      <!-- Serviço 6 -->
+      <div class="service-card relative h-[46px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">brow lamination</span>
+        </div>
+      </div>
+
+      <!-- Serviço 7 -->
+      <div class="service-card relative h-[46px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer group">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-3">
+          <span class="font-['Dancing_Script',cursive] text-white text-[21px] font-normal drop-shadow-sm text-center leading-tight">micropigmentação labial</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== MENTORIA ===================== -->
+  <section id="mentoria" class="px-4 py-10 lg:py-14 max-w-[1100px] mx-auto">
+
+    <!-- Section Header -->
+    <div class="mb-6 lg:mb-8">
+      <h2 class="font-[Inter] text-[21px] font-medium text-primary">Mentoria</h2>
+      <p class="mt-1 font-['Red_Hat_Display',sans-serif] text-base lg:text-[17px] font-normal text-black">
+        De profissional para profissional: o caminho para a excelência na beleza natural.
+      </p>
+    </div>
+
+    <!-- Cards: stacked mobile, side-by-side desktop -->
+    <div class="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:gap-6">
+
+      <!-- Card 1: Intensiva -->
+      <article class="bg-secondary rounded-2xl overflow-hidden flex flex-col">
+        <!-- Image area -->
+        <div class="w-full h-[200px] lg:h-[295px] bg-primary/20 flex items-center justify-center">
+          <!-- Replace with: <img src="./images/mentoria-intensiva.jpg" alt="Fios Sustentáveis Intensiva" class="w-full h-full object-cover"> -->
+          <span class="text-white/50 text-sm font-[Inter] select-none">[ imagem do curso ]</span>
+        </div>
+        <!-- Content -->
+        <div class="flex flex-col flex-1 p-6 lg:p-8 gap-4">
+          <h3 class="font-['Red_Hat_Display',sans-serif] text-base font-bold text-black leading-snug">
+            Fios Sustentáveis Intensiva
+          </h3>
+          <p class="font-['Red_Hat_Display',sans-serif] text-[13px] font-normal text-black leading-relaxed">
+            Um mergulho concentrado na arte de criar fios artificiais com técnica, consciência e sustentabilidade.
+            A técnica de Fios Sustentáveis combina estratégia, precisão e sensibilidade para desenhar fio a fio,
+            reproduzindo as tramas naturais da sobrancelha com realismo e harmonia — sem excessos, sem artificialidade.
+            <br><br>
+            Uma experiência intensa, pensada para quem quer absorver o máximo em um único dia e elevar seu resultado imediatamente.
+          </p>
+          <span class="inline-flex self-start items-center bg-white/30 text-black font-['Red_Hat_Display',sans-serif] text-[13px] leading-none rounded-full px-3 py-1.5">
+            Duração: 1 dia intenso, de 9:00h às 19:00h
+          </span>
+          <p class="font-['Red_Hat_Display',sans-serif] text-[13px] text-black leading-relaxed">
+            <span class="font-bold">Para quem é este curso?</span><br>
+            Para quem já tem experiência e busca aperfeiçoamento e confiança.
+          </p>
+          <div class="mt-auto pt-2">
+            <a href="https://wa.me/5531996927404?text=Olá%20Marina!%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20Intensiva." target="_blank"
+               class="inline-block bg-primary text-white font-[Inter] text-sm font-bold px-6 py-2.5 rounded-full hover:bg-primary/85 transition-colors">
+              Saiba Mais
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Imersão -->
+      <article class="bg-secondary rounded-2xl overflow-hidden flex flex-col">
+        <!-- Image area -->
+        <div class="w-full h-[200px] lg:h-[312px] bg-primary/20 flex items-center justify-center">
+          <!-- Replace with: <img src="./images/mentoria-imersao.jpg" alt="Fios Sustentáveis Imersão" class="w-full h-full object-cover"> -->
+          <span class="text-white/50 text-sm font-[Inter] select-none">[ imagem do curso ]</span>
+        </div>
+        <!-- Content -->
+        <div class="flex flex-col flex-1 p-6 lg:p-8 gap-4">
+          <h3 class="font-['Red_Hat_Display',sans-serif] text-base font-bold text-black leading-snug">
+            Fios Sustentáveis Imersão
+          </h3>
+          <p class="font-['Red_Hat_Display',sans-serif] text-[13px] font-normal text-black leading-relaxed">
+            Dois dias de aprendizado profundo e transformação completa na técnica de Fios Sustentáveis.
+            <br><br>
+            Mais que uma mentoria, é uma jornada prática e personalizada, onde cada detalhe é explorado com tempo,
+            calma e acompanhamento de perto. Aqui, o foco está em aperfeiçoar sua execução fio a fio, consolidar
+            segurança e desenvolver um olhar artístico ainda mais apurado.
+            <br><br>
+            Ideal para quem quer viver a experiência completa e sair dominando cada etapa da técnica com confiança.
+          </p>
+          <span class="inline-flex self-start items-center bg-white/30 text-black font-['Red_Hat_Display',sans-serif] text-[13px] leading-none rounded-full px-3 py-1.5">
+            Duração: 2 dias intensos, de 9:00h às 19:00h
+          </span>
+          <p class="font-['Red_Hat_Display',sans-serif] text-[13px] text-black leading-relaxed">
+            <span class="font-bold">Para quem é este curso?</span><br>
+            Para quem vai começar do zero e quer tirar todas as dúvidas.
+          </p>
+          <div class="mt-auto pt-2">
+            <a href="https://wa.me/5531996927404?text=Olá%20Marina!%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20Imersão." target="_blank"
+               class="inline-block bg-primary text-white font-[Inter] text-sm font-bold px-6 py-2.5 rounded-full hover:bg-primary/85 transition-colors">
+              Saiba Mais
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== SOBRE MIM ===================== -->
+  <section id="sobre" class="px-4 py-10 lg:py-14 max-w-[1100px] mx-auto">
+    <h2 class="font-[Inter] text-[21px] font-medium text-primary mb-5 lg:mb-7">Sobre Mim</h2>
+
+    <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
+
+      <!-- Photo -->
+      <div class="w-full lg:w-[495px] lg:flex-shrink-0 h-[232px] bg-neutral-200 rounded-2xl overflow-hidden flex items-center justify-center">
+        <!-- Replace with: <img src="./images/marina-franca.jpg" alt="Marina França" class="w-full h-full object-cover object-top"> -->
+        <span class="text-neutral-400 text-sm font-[Inter] select-none">[ foto Marina França ]</span>
+      </div>
+
+      <!-- Bio + Buttons -->
+      <div class="flex flex-col gap-6 lg:justify-center lg:pt-0">
+        <p class="font-['Red_Hat_Display',sans-serif] text-[13px] font-normal text-black leading-relaxed">
+          Meu nome é Marina França, atuo no mercado da beleza e meu maior objetivo é alcançar, por meio da
+          naturalidade, resultados que realcem e valorizem suas características.
+          <br><br>
+          Sou Master em Nanopigmentação Visagista e Lash Designer. Venho desenvolvendo um trabalho exclusivo
+          e personalizado para cada cliente, integrando a imagem pessoal e o visagismo de forma estratégica
+          e planejada.
+        </p>
+
+        <div class="flex flex-col gap-3 lg:flex-row">
+          <a href="https://wa.me/5531996927404?text=Olá%20Marina!%20Quero%20entrar%20em%20contato." target="_blank"
+             class="w-full lg:w-auto text-center bg-primary text-white font-[Inter] text-sm font-bold px-7 py-3 rounded-full hover:bg-primary/85 transition-colors">
+            Fale Comigo
+          </a>
+          <a href="https://instagram.com/marinafrancabeauty" target="_blank"
+             class="w-full lg:w-auto text-center bg-white text-navy font-[Inter] text-sm font-bold px-7 py-3 rounded-full border border-navy hover:bg-navy/5 transition-colors">
+            Acompanhe meu trabalho
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== DEPOIMENTOS E REVIEWS ===================== -->
+  <section id="depoimentos" class="px-4 py-10 lg:py-14 max-w-[1100px] mx-auto">
+    <h2 class="font-[Inter] text-[21px] font-medium text-primary mb-6 lg:mb-8">Depoimentos e Reviews</h2>
+
+    <div class="relative">
+
+      <!-- Track Wrapper -->
+      <div class="overflow-hidden">
+        <div id="carousel-track" class="flex gap-4 transition-transform duration-300 ease-in-out">
+
+          <!-- Review 1 -->
+          <article class="review-card flex-shrink-0 w-full lg:w-[calc(33.333%-11px)] border border-neutral-200 rounded-2xl p-5 flex flex-col gap-3">
+            <div class="flex gap-0.5" aria-label="5 estrelas">
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+            </div>
+            <p class="font-['Red_Hat_Display',sans-serif] text-[14px] text-black leading-relaxed flex-1">
+              Fiz uma nano com essa querida e simplesmente mudou minha vida. Ela é pontual e extremamente paciente na
+              hora de explicar os procedimentos, recomendo pra todos de olhos fechados!
+            </p>
+            <p class="font-['Red_Hat_Display',sans-serif] text-[14px] font-bold text-black">Fernanda Dutra</p>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card flex-shrink-0 w-full lg:w-[calc(33.333%-11px)] border border-neutral-200 rounded-2xl p-5 flex flex-col gap-3">
+            <div class="flex gap-0.5" aria-label="5 estrelas">
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+            </div>
+            <p class="font-['Red_Hat_Display',sans-serif] text-[14px] text-black leading-relaxed flex-1">
+              Perfeita!!! Educada, acolhedora e salvou minha sobrancelha!!
+            </p>
+            <p class="font-['Red_Hat_Display',sans-serif] text-[14px] font-bold text-black">Maria Júlia Alvarenga Lage</p>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card flex-shrink-0 w-full lg:w-[calc(33.333%-11px)] border border-neutral-200 rounded-2xl p-5 flex flex-col gap-3">
+            <div class="flex gap-0.5" aria-label="5 estrelas">
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+              <svg class="w-4 h-4 fill-primary" viewBox="0 0 20 20"><path d="M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19z"/></svg>
+            </div>
+            <p class="font-['Red_Hat_Display',sans-serif] text-[14px] text-black leading-relaxed flex-1">
+              Gostei bastante do resultado, Marina tem um senso estético muito bom e respeita a vontade da cliente,
+              eu queria que minha Nano ficasse bem natural e que só realçasse e foi esse o resultado.
+            </p>
+            <p class="font-['Red_Hat_Display',sans-serif] text-[14px] font-bold text-black">Francielle Fonseca</p>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Arrows: visible on mobile as prev/next, on desktop as decorative -->
+      <div class="flex justify-end gap-3 mt-5 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:w-[calc(100%+80px)] lg:-left-10 lg:justify-between lg:pointer-events-none">
+        <button id="prev-btn" onclick="slideCarousel(-1)"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-secondary text-secondary text-2xl leading-none hover:bg-secondary hover:text-white transition-colors lg:pointer-events-auto">
+          ‹
+        </button>
+        <button id="next-btn" onclick="slideCarousel(1)"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-secondary text-secondary text-2xl leading-none hover:bg-secondary hover:text-white transition-colors lg:pointer-events-auto">
+          ›
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== CONTATO ===================== -->
+  <section id="contato" class="px-4 py-10 lg:py-14 max-w-[1100px] mx-auto">
+    <h2 class="font-[Inter] text-[21px] font-medium text-primary mb-2">Contato</h2>
+    <p class="font-['Red_Hat_Display',sans-serif] text-[17px] font-normal text-black mb-6 lg:mb-8 max-w-2xl">
+      Vamos conversar? Estou à disposição para esclarecer dúvidas, planejar seu orçamento ou simplesmente receber seu contato.
+    </p>
+
+    <!-- Info Lines -->
+    <div class="flex flex-col gap-3 mb-7 lg:mb-8">
+      <div class="flex flex-wrap gap-x-2 gap-y-1 items-baseline">
+        <span class="font-['Red_Hat_Display',sans-serif] text-[17px] font-semibold text-black">Whats App:</span>
+        <a href="https://wa.me/5531996927404" class="font-['Red_Hat_Display',sans-serif] text-[17px] font-normal text-black hover:text-primary transition-colors">
+          +55 (31) 9 9692-7404
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-x-2 gap-y-1 items-baseline">
+        <span class="font-['Red_Hat_Display',sans-serif] text-[17px] font-semibold text-black">Instagram:</span>
+        <a href="https://instagram.com/marinafrancabeauty" target="_blank" class="font-['Red_Hat_Display',sans-serif] text-[17px] font-normal text-black hover:text-primary transition-colors">
+          @marinafrançabeauty
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-x-2 gap-y-1 items-baseline">
+        <span class="font-['Red_Hat_Display',sans-serif] text-[17px] font-semibold text-black">Endereço:</span>
+        <span class="font-['Red_Hat_Display',sans-serif] text-[17px] font-normal text-black">
+          Av. Prudente de Morais, 287 - sala 1009 - Santo Antônio, Belo Horizonte
+        </span>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-3">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/5531996927404?text=Olá%20Marina!%20Quero%20entrar%20em%20contato." target="_blank"
+         class="flex items-center gap-2 bg-primary text-white font-[Inter] text-sm font-bold px-5 py-2.5 rounded-full hover:bg-primary/85 transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/marinafrancabeauty" target="_blank"
+         class="flex items-center gap-2 bg-primary text-white font-[Inter] text-sm font-bold px-5 py-2.5 rounded-full hover:bg-primary/85 transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        Instagram
+      </a>
+
+      <!-- Maps -->
+      <a href="https://maps.google.com/?q=Av.+Prudente+de+Morais,+287,+Santo+Antônio,+Belo+Horizonte" target="_blank"
+         class="flex items-center gap-2 bg-primary text-white font-[Inter] text-sm font-bold px-5 py-2.5 rounded-full hover:bg-primary/85 transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+        </svg>
+        Maps
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ===================== GALERIA ===================== -->
+  <section id="galeria" aria-label="Galeria de trabalhos">
+    <div class="grid grid-cols-1 lg:grid-cols-3">
+      <!-- Foto 1 -->
+      <div class="h-[400px] bg-neutral-200 flex items-center justify-center overflow-hidden">
+        <!-- Replace with: <img src="./images/galeria-1.jpg" alt="Trabalho Marina França" class="w-full h-full object-cover"> -->
+        <span class="text-neutral-400 text-sm font-[Inter] select-none">[ foto 1 ]</span>
+      </div>
+      <!-- Foto 2 -->
+      <div class="h-[400px] bg-neutral-300 flex items-center justify-center overflow-hidden">
+        <!-- Replace with: <img src="./images/galeria-2.jpg" alt="Trabalho Marina França" class="w-full h-full object-cover"> -->
+        <span class="text-neutral-400 text-sm font-[Inter] select-none">[ foto 2 ]</span>
+      </div>
+      <!-- Foto 3 -->
+      <div class="h-[400px] bg-neutral-200 flex items-center justify-center overflow-hidden">
+        <!-- Replace with: <img src="./images/galeria-3.jpg" alt="Trabalho Marina França" class="w-full h-full object-cover"> -->
+        <span class="text-neutral-400 text-sm font-[Inter] select-none">[ foto 3 ]</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-primary py-6 px-4 text-center">
+    <p class="text-white font-[Inter] text-[13px] font-normal opacity-80">
+      © 2025 Marina França Beauty. Todos os direitos reservados.
+    </p>
+  </footer>
+
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // ---- Hamburger Menu ----
+    const menuBtn   = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    const line3 = document.getElementById('line3');
+    let menuOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      menuBtn.setAttribute('aria-expanded', String(menuOpen));
+      mobileMenu.classList.toggle('hidden', !menuOpen);
+      if (menuOpen) {
+        line1.style.transform = 'translateY(8px) rotate(45deg)';
+        line2.style.opacity   = '0';
+        line3.style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        line1.style.transform = '';
+        line2.style.opacity   = '';
+        line3.style.transform = '';
+      }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+        line1.style.transform = '';
+        line2.style.opacity   = '';
+        line3.style.transform = '';
+      });
+    });
+
+    // ---- Carousel (Reviews) ----
+    let currentSlide = 0;
+    const track  = document.getElementById('carousel-track');
+    const cards  = Array.from(document.querySelectorAll('.review-card'));
+    const total  = cards.length;
+
+    function getSlideWidth() {
+      if (!cards[0]) return 0;
+      return cards[0].offsetWidth + 16; // 16px = gap-4
+    }
+
+    function updateCarousel() {
+      const isDesktop = window.innerWidth >= 1024;
+      track.style.transform = isDesktop ? 'translateX(0)' : `translateX(-${currentSlide * getSlideWidth()}px)`;
+    }
+
+    function slideCarousel(dir) {
+      if (window.innerWidth >= 1024) return;
+      currentSlide = Math.max(0, Math.min(total - 1, currentSlide + dir));
+      updateCarousel();
+    }
+
+    window.addEventListener('resize', () => {
+      currentSlide = 0;
+      updateCarousel();
+    });
+  </script>
+
+</body>
+</html>
