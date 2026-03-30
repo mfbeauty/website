@@ -20,3 +20,19 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer components {
+  .service-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, #3B2519, #1E0D04);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 1;
+  }
+  .service-card:hover::after,
+  .service-card[aria-expanded="true"]::after {
+    opacity: 0.6;
+  }
+}
