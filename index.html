@@ -4,11 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marina França Beauty</title>
+  <meta name="description" content="Marina França Beauty — Nano Fios Sustentáveis, Design de Sobrancelhas, Lash Lifting, Micropigmentação Labial e mais. Agende sua consulta em Belo Horizonte.">
+  <meta name="theme-color" content="#a16445">
 
-  <!-- Google Fonts -->
+  <!-- DNS prefetch -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <!-- Preload LCP image (logo acima da dobra) -->
+  <link rel="preload" as="image" href="./images/logo.webp" fetchpriority="high">
+
+  <!-- Preload Chatime (usado no critical path) -->
+  <link rel="preload" href="./fonts/chatime.otf" as="font" type="font/otf" crossorigin>
+
+  <!-- Google Fonts — non-render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;600;700&family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Red+Hat+Display:wght@400;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
 
   <link href="./output.css" rel="stylesheet">
 </head>
@@ -20,7 +34,7 @@
 
       <!-- Logo -->
       <a href="#" class="flex items-center select-none" aria-label="Marina França Beauty">
-        <img src="./images/logo.png" alt="Marina França Beauty" class="h-8 lg:h-10 w-auto object-contain">
+        <img src="./images/logo.webp" alt="Marina França Beauty" class="h-8 lg:h-10 w-auto object-contain" width="160" height="40" fetchpriority="high" decoding="async" loading="eager">
       </a>
 
       <!-- Desktop Nav -->
@@ -53,6 +67,9 @@
   </header>
 
 
+  <!-- Visually hidden h1 para SEO e acessibilidade -->
+  <h1 class="sr-only">Marina França Beauty — Estética e Beleza em Belo Horizonte</h1>
+
   <!-- ===================== CARTA DE SERVIÇOS ===================== -->
   <section id="carta-servicos" class="px-4 pt-10 pb-6 lg:pt-14 lg:pb-10 max-w-[1100px] mx-auto">
     <h2 class="font-[Inter] text-[21px] font-medium text-primary mb-5 lg:mb-7">Carta de Serviços</h2>
@@ -67,7 +84,7 @@
       <div id="servicos-grid" class="flex flex-col gap-3 lg:grid lg:grid-cols-3 lg:gap-4 lg:flex-1">
 
         <!-- Card 1 -->
-        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="nano-fios" role="button" tabindex="0" aria-expanded="false" aria-label="nano fios sustentáveis — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_nano_fios.png') center/cover no-repeat;">
+        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="nano-fios" role="button" tabindex="0" aria-expanded="false" aria-label="nano fios sustentáveis — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_nano_fios.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">nano fios sustentáveis</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -75,7 +92,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="design-sustentavel" role="button" tabindex="0" aria-expanded="false" aria-label="design sustentável — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_design_sustentavel.png') center/cover no-repeat;">
+        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="design-sustentavel" role="button" tabindex="0" aria-expanded="false" aria-label="design sustentável — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_design_sustentavel.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">design sustentável</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -83,7 +100,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="lash-lifting" role="button" tabindex="0" aria-expanded="false" aria-label="lash lifting — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_lash_lifiting.png') center/cover no-repeat;">
+        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="lash-lifting" role="button" tabindex="0" aria-expanded="false" aria-label="lash lifting — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_lash_lifiting.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">lash lifting</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -91,7 +108,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="remocao-laser" role="button" tabindex="0" aria-expanded="false" aria-label="remoção à laser — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_remocao_laser.png') center/cover no-repeat;">
+        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="remocao-laser" role="button" tabindex="0" aria-expanded="false" aria-label="remoção à laser — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_remocao_laser.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">remoção à laser</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -99,7 +116,7 @@
         </div>
 
         <!-- Card 5 -->
-        <div class="service-card relative h-[100px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="design-tintura" role="button" tabindex="0" aria-expanded="false" aria-label="design sustentável com tintura — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_design_tintura.png') center/cover no-repeat;">
+        <div class="service-card relative h-[100px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="design-tintura" role="button" tabindex="0" aria-expanded="false" aria-label="design sustentável com tintura — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_design_tintura.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">design sustentável<br>com tintura</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -107,7 +124,7 @@
         </div>
 
         <!-- Card 6 -->
-        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="brow-lamination" role="button" tabindex="0" aria-expanded="false" aria-label="brow lamination — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_brown_lamination.png') center/cover no-repeat;">
+        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="brow-lamination" role="button" tabindex="0" aria-expanded="false" aria-label="brow lamination — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_brown_lamination.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">brow lamination</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -115,7 +132,7 @@
         </div>
 
         <!-- Card 7 -->
-        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="micropigmentacao-labial" role="button" tabindex="0" aria-expanded="false" aria-label="micropigmentação labial — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_micropigmentacao.png') center/cover no-repeat;">
+        <div class="service-card relative h-[80px] lg:h-32 rounded-2xl overflow-hidden cursor-pointer" data-service="micropigmentacao-labial" role="button" tabindex="0" aria-expanded="false" aria-label="micropigmentação labial — ver detalhes" style="background: linear-gradient(to bottom right, rgba(161,100,69,0.75), rgba(196,160,124,0.75)), url('./images/card_micropigmentacao.webp') center/cover no-repeat;">
           <div class="absolute inset-0 flex flex-col justify-between p-4">
             <span class="font-['Chatime',cursive] text-white text-[21px] font-normal drop-shadow-sm leading-tight">micropigmentação labial</span>
             <svg class="card-chevron w-5 h-5 text-white self-end opacity-80 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
@@ -246,7 +263,7 @@
 
       <!-- Photo -->
       <div class="w-full lg:w-[495px] lg:flex-shrink-0 h-[232px] bg-neutral-200 rounded-2xl overflow-hidden flex items-center justify-center">
-        <img src="./images/about_me.png" alt="Marina França" class="w-full h-full object-cover object-top">
+        <img src="./images/about_me.webp" alt="Marina França" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
       </div>
 
       <!-- Bio + Buttons -->
@@ -465,13 +482,13 @@
     <div class="px-4 py-10 lg:py-14 max-w-[1100px] mx-auto">
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6">
         <div class="h-[320px] lg:h-[380px] rounded-2xl overflow-hidden">
-          <img src="./images/footer_first.png" alt="Trabalho Marina França 1" class="w-full h-full object-cover">
+          <img src="./images/footer_first.webp" alt="Trabalho Marina França 1" class="w-full h-full object-cover" loading="lazy" decoding="async">
         </div>
         <div class="h-[320px] lg:h-[380px] rounded-2xl overflow-hidden">
-          <img src="./images/footer_second.png" alt="Trabalho Marina França 2" class="w-full h-full object-cover">
+          <img src="./images/footer_second.webp" alt="Trabalho Marina França 2" class="w-full h-full object-cover" loading="lazy" decoding="async">
         </div>
         <div class="h-[320px] lg:h-[380px] rounded-2xl overflow-hidden">
-          <img src="./images/footer_third.png" alt="Trabalho Marina França 3" class="w-full h-full object-cover">
+          <img src="./images/footer_third.webp" alt="Trabalho Marina França 3" class="w-full h-full object-cover" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -568,7 +585,7 @@
     const SERVICES = {
       'nano-fios': {
         name: 'nano fios sustentáveis',
-        img: './images/expanded_nano_fios.png',
+        img: './images/expanded_nano_fios.webp',
         pricePix: '850,00',
         priceCredit: '950,00',
         creditInfo: '4X SEM JUROS\n12X COM JUROS',
@@ -577,7 +594,7 @@
       },
       'design-sustentavel': {
         name: 'design sustentável',
-        img: './images/expanded_design_sustentavel.png',
+        img: './images/expanded_design_sustentavel.webp',
         pricePix: '75,00',
         priceCredit: '80,00',
         creditInfo: '2X SEM JUROS',
@@ -586,7 +603,7 @@
       },
       'lash-lifting': {
         name: 'lash lifting',
-        img: './images/expanded_lash_lifiting.png',
+        img: './images/expanded_lash_lifiting.webp',
         pricePix: '180,00',
         priceCredit: '200,00',
         creditInfo: '2X SEM JUROS\n6X COM JUROS',
@@ -595,7 +612,7 @@
       },
       'remocao-laser': {
         name: 'remoção à laser',
-        img: './images/expanded_remocao_lase.png',
+        img: './images/expanded_remocao_lase.webp',
         pricePix: '250,00',
         priceCredit: '350,00',
         creditInfo: '2X SEM JUROS\n5X COM JUROS',
@@ -604,7 +621,7 @@
       },
       'design-tintura': {
         name: 'design sustentável com tintura',
-        img: './images/expanded_design_tintura.png',
+        img: './images/expanded_design_tintura.webp',
         pricePix: '85,00',
         priceCredit: '90,00',
         creditInfo: '2X SEM JUROS',
@@ -613,7 +630,7 @@
       },
       'brow-lamination': {
         name: 'brow lamination',
-        img: './images/expanded_brown_lamination.png',
+        img: './images/expanded_brown_lamination.webp',
         pricePix: '180,00',
         priceCredit: '200,00',
         creditInfo: '2X SEM JUROS\n6X COM JUROS',
@@ -622,7 +639,7 @@
       },
       'micropigmentacao-labial': {
         name: 'micropigmentação labial',
-        img: './images/expanded_micropigmentacao.png',
+        img: './images/expanded_micropigmentacao.webp',
         pricePix: '850,00',
         priceCredit: '950,00',
         creditInfo: '4X SEM JUROS\n12X COM JUROS',
