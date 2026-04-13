@@ -18,6 +18,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 56px;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 89px;
+    }
   }
 }
 
