@@ -705,28 +705,7 @@
       if (activeService === key) { closeDetailPanel(); return; }
 
       populateDetail(data);
-
-      const isDesktop = window.innerWidth >= 1024;
-
-      if (isDesktop) {
-        // Garante que o painel está em servicos-layout (pode estar dentro do grid vindo do mobile)
-        servicosLayout.appendChild(serviceDetail);
-        // Grid passa de 3 para 2 colunas
-        servicosGrid.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
-        // Largura fixa do painel (310px como no Figma)
-        serviceDetail.style.width        = '350px';
-        serviceDetail.style.flexShrink   = '0';
-        serviceDetail.style.alignSelf    = 'stretch';
-      } else {
-        // Move o painel para logo após o card clicado (dentro do flex-col)
-        const card = servicosGrid.querySelector(`[data-service="${key}"]`);
-        card.insertAdjacentElement('afterend', serviceDetail);
-        serviceDetail.style.width      = '';
-        serviceDetail.style.flexShrink = '';
-        serviceDetail.style.alignSelf  = '';
-        // Rola suavemente para o painel
-        setTimeout(() => serviceDetail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
-      }
+      positionDetailPanel(key);
 
       serviceDetail.classList.remove('hidden');
 
@@ -739,6 +718,24 @@
       });
 
       activeService = key;
+    }
+
+    function positionDetailPanel(key) {
+      const isDesktop = window.innerWidth >= 1024;
+      if (isDesktop) {
+        servicosLayout.appendChild(serviceDetail);
+        servicosGrid.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
+        serviceDetail.style.width        = '350px';
+        serviceDetail.style.flexShrink   = '0';
+        serviceDetail.style.alignSelf    = 'stretch';
+      } else {
+        const card = servicosGrid.querySelector(`[data-service="${key}"]`);
+        card.insertAdjacentElement('afterend', serviceDetail);
+        serviceDetail.style.width      = '';
+        serviceDetail.style.flexShrink = '';
+        serviceDetail.style.alignSelf  = '';
+        setTimeout(() => serviceDetail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+      }
     }
 
     function closeDetailPanel() {
@@ -756,9 +753,12 @@
       activeService = null;
     }
 
-    // Re-posiciona ao mudar de tamanho de tela (ex: rotação do dispositivo)
+    // Re-posiciona apenas quando cruza o breakpoint mobile ↔ desktop
+    let wasDesktop = window.innerWidth >= 1024;
     window.addEventListener('resize', () => {
-      if (activeService) openDetailPanel(activeService);
+      const isDesktop = window.innerWidth >= 1024;
+      if (activeService && isDesktop !== wasDesktop) positionDetailPanel(activeService);
+      wasDesktop = isDesktop;
     });
 
     // ESC fecha o painel
